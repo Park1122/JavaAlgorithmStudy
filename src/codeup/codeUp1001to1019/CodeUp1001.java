@@ -1,4 +1,4 @@
-package codeup;
+package codeup.codeUp1001to1019;
 
 public class CodeUp1001 {
     public static void main(String[] args){
