@@ -9,7 +9,7 @@ public class Swea2050 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         try {
             String str = br.readLine();
-            for (int i = 0; i < str.length(); i++) { // 'A' = 65 ~ 'Z' = 90
+            for (int i = 0; i < str.length(); i++) { // 'A' : 65 ~ 'Z' : 90
                 System.out.print((int)(str.charAt(i)) - 64);
                 System.out.print(" ");
             }
