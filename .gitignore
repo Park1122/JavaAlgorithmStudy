@@ -3,5 +3,6 @@
 .idea
 *.iml
 out/
-/src/*
-!/src/**
+src/*
+!/src/codeup
+!/src/swea
