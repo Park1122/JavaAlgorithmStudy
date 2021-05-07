@@ -1,4 +1,4 @@
-package fastcampus.datastructure;
+package study.datastructure;
 
 import java.util.ArrayList;
 
