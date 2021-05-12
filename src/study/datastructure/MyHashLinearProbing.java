@@ -76,14 +76,14 @@ public class MyHashLinearProbing {
 
     public static void main(String[] args) {
         MyHashLinearProbing table = new MyHashLinearProbing(20);
-        table.saveData("Park Jungwook", "01011112222");
-        table.saveData("Kim kkk", "01022223333");
-        table.saveData("Park www", "01033334444");
-        table.saveData("Park", "01044445555");
+        table.saveData("Park", "01011112222");
+        table.saveData("Lee", "01022223333");
+        table.saveData("ParkJ", "01033334444");
+        table.saveData("ParkT", "01044445555");
 
-        System.out.println(table.getData("DaveLee"));
-        System.out.println(table.getData("David"));
-        System.out.println(table.getData("Dave"));
+        System.out.println(table.getData("Park"));
+        System.out.println(table.getData("ParkJ"));
+        System.out.println(table.getData("ParkT"));
 
         System.out.println("================================");
 
