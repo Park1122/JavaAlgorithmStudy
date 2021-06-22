@@ -1,4 +1,4 @@
-package study.bruteforce;
+package study.util.bruteforce;
 
 import java.util.Arrays;
 
