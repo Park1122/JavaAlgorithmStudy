@@ -1,18 +1,18 @@
-package study.algorithm.dfs;
+package study.algorithm.graph;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class DFS {
-    public ArrayList<String> dfsFunc(HashMap<String, ArrayList<String>> graph, String startNode) {
+public class BFS {
+    public ArrayList<String> bfsFunc(HashMap<String, ArrayList<String>> graph, String startNode) {
         ArrayList<String> visited = new ArrayList<>();
         ArrayList<String> needVisit = new ArrayList<>();
 
         needVisit.add(startNode);
 
         while (needVisit.size() > 0) {
-            String node = needVisit.remove(needVisit.size() - 1);
+            String node = needVisit.remove(0);
 
             if (!visited.contains(node)) {
                 visited.add(node);
@@ -20,7 +20,7 @@ public class DFS {
             }
         }
 
-        return visited;
+        return visited; // 탐색(방문) 순서가 적혀있는 리스트 반환
     }
 
     public static void main(String[] args) {
@@ -37,11 +37,11 @@ public class DFS {
         graph.put("I", new ArrayList<>(Arrays.asList("C", "J")));
         graph.put("J", new ArrayList<>(Arrays.asList("I")));
 
-        //dfs
-        DFS dfs = new DFS();
-        ArrayList<String> dfsSequence = dfs.dfsFunc(graph, "A");
+        //bfs
+        BFS bfs = new BFS();
+        ArrayList<String> bfsSequence = bfs.bfsFunc(graph, "A");
 
         //print
-        System.out.println(dfsSequence);
+        System.out.println(bfsSequence);
     }
 }
