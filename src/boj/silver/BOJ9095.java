@@ -3,25 +3,34 @@ package boj.silver;
 import java.io.*;
 
 public class BOJ9095 {
-    public static void main(String[] args) throws IOException {
+    static int[] Dy;
+    static StringBuilder sb = new StringBuilder();
+
+    static void preprocess() {
+        Dy = new int[15];
+
+        Dy[1] = 1;
+        Dy[2] = 2;
+        Dy[3] = 4;
+
+        for (int i = 4; i <= 11; i++) {
+            Dy[i] = Dy[i - 1] + Dy[i - 2] + Dy[i - 3];
+        }
+    }
+
+    static void solve() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        int tc = Integer.parseInt(br.readLine());
-        int[] arr = new int[11];
-        arr[1] = 1;
-        arr[2] = 2;
-        arr[3] = 4;
-        for (int i = 4; i <= 10; i++) {
-            arr[i] = arr[i-1] + arr[i-2] + arr[i-3];
-        }
+        int T = Integer.parseInt(br.readLine());
 
-        for (int i = 0; i < tc; i++) {
-            int n = Integer.parseInt(br.readLine());
-            bw.write(arr[n] + "\n");
+        for (int i = 1; i <= T; i++) {
+            int N = Integer.parseInt(br.readLine());
+            sb.append(Dy[N]).append('\n');
         }
+        System.out.println(sb);
+    }
 
-        bw.flush();
-        bw.close();
-        br.close();
+    public static void main(String[] args) throws IOException {
+        preprocess();
+        solve();
     }
 }
