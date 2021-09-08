@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-import java.util.jar.JarEntry;
 
 public class BOJ5557 { // 어렵다.. 이해도 힘든 문제다..
     static int N;
