@@ -36,8 +36,7 @@ public class BOJ2096 {
             DyMax[i][1] = Math.max(DyMax[i - 1][1], DyMax[i - 1][2]) + nums[i][1];
             DyMax[i][2] = Math.max(DyMax[i - 1][1], Math.max(DyMax[i - 1][2], DyMax[i - 1][3])) + nums[i][2];
             DyMax[i][3] = Math.max(DyMax[i - 1][2], DyMax[i - 1][3]) + nums[i][3];
-        }
-        for (int i = 2; i <= N; i++) {
+
             DyMin[i][1] = Math.min(DyMin[i - 1][1], DyMin[i - 1][2]) + nums[i][1];
             DyMin[i][2] = Math.min(DyMin[i - 1][1], Math.min(DyMin[i - 1][2], DyMin[i - 1][3])) + nums[i][2];
             DyMin[i][3] = Math.min(DyMin[i - 1][2], DyMin[i - 1][3]) + nums[i][3];
