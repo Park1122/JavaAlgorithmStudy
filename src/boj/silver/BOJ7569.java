@@ -8,7 +8,7 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class BOJ7569 {
-    static int N, M, H, ans;
+    static int N, M, H;
     static int[][][] tomato, dist;
     static boolean[][][] visit;
     static int[][] dir = {{1, 0, 0}, {0, 1, 0}, {-1, 0, 0}, {0, -1, 0}, {0, 0, 1}, {0, 0, -1}};
