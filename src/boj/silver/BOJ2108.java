@@ -26,18 +26,17 @@ public class BOJ2108 {
 
     static int getMode(HashMap<Integer, Integer> map) {
         int freq = Integer.MIN_VALUE;
-        int mode = 0;
         ArrayList<Integer> temp = new ArrayList<>();
 
+        // 최빈 횟수 구하기
         for (int n : set) {
             int k = map.get(n);
             if (freq < k) {
                 freq = k;
-                mode = n;
             }
         }
-//        temp.add(mode);
 
+        // 최빈 횟수에 해당하는 key 뽑기
         for (int n : set) {
             int k = map.get(n);
             if (freq == k) {
