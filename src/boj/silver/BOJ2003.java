@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 
 public class BOJ2003 {
     static int N, M;
-    static int[] a;
+    static int[] A;
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
 
@@ -15,26 +15,27 @@ public class BOJ2003 {
         st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
-        a = new int[N + 1];
+        A = new int[N + 1];
         st = new StringTokenizer(br.readLine());
         for (int i = 1; i <= N; i++) {
-            a[i] = Integer.parseInt(st.nextToken());
+            A[i] = Integer.parseInt(st.nextToken());
         }
     }
 
     static void solve() {
-        int R = 0, sum = 0, ans = 0;
+        int R = 0; // 우측 포인터
+        int sum = 0; // L ~ R 까지의 합
+        int ans = 0; // 조건에 부합하는 경우의 수
+
         for (int L = 1; L <= N; L++) {
-            sum -= a[L - 1];
+            sum -= A[L - 1];
 
             while (R + 1 <= N && sum < M) {
                 R++;
-                sum += a[R];
+                sum += A[R];
             }
 
-            if (sum == M) {
-                ans++;
-            }
+            if (sum == M) ans++;
         }
 
         System.out.println(ans);
